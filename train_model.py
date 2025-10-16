@@ -240,7 +240,7 @@ if __name__ == "__main__":
         'batch_size': 32,
         'epochs': 30,
         'learning_rate': 0.001,
-        'model_save_path': 'model.h5'
+        'model_save_path': 'model.keras'
     }
     
     print("Training Configuration:")
