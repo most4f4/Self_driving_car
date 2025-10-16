@@ -5,17 +5,17 @@ Usage: python drive.py model.keras
 
 import os
 import sys
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-
+import cv2
+import base64
 import socketio
 import eventlet
 import numpy as np
 from tensorflow.keras.models import load_model
 from flask import Flask
-import base64
 from io import BytesIO
 from PIL import Image
-import cv2
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+
 
 # Initialize
 sio = socketio.Server()
