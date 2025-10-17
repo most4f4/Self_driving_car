@@ -54,13 +54,10 @@ def build_nvidia_model():
     
     # Fully connected layers
     model.add(Dense(1164, activation='relu'))
-    model.add(Dropout(0.5))  # Dropout to prevent overfitting
-    
+
     model.add(Dense(100, activation='relu'))
-    model.add(Dropout(0.5))
     
     model.add(Dense(50, activation='relu'))
-    model.add(Dropout(0.5))
     
     model.add(Dense(10, activation='relu'))
     
@@ -73,8 +70,8 @@ def build_nvidia_model():
 def train_model(csv_path='../data/driving_log.csv', 
                 balance=True,
                 batch_size=32, 
-                epochs=30,
-                learning_rate=0.001,
+                epochs=50,
+                learning_rate=0.0003,
                 model_save_path='model.h5'):
     """
     Train the self-driving car model.
@@ -239,7 +236,7 @@ if __name__ == "__main__":
         'balance': True,
         'batch_size': 32,
         'epochs': 30,
-        'learning_rate': 0.001,
+        'learning_rate': 0.0003,
         'model_save_path': 'model.keras'
     }
     

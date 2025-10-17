@@ -75,7 +75,7 @@ def batch_generator(data, batch_size=32, is_training=True):
             yield X_batch, y_batch # Yield keyword to make this a generator
 
 
-def balance_dataset(data, threshold=0.01, keep_prob=0.2):
+def balance_dataset(data, threshold=0.01, keep_prob=0.05):
     """
     Balance the dataset by removing some near-zero steering samples.
     
@@ -138,7 +138,7 @@ def prepare_data(csv_path, balance=True, test_size=0.2, random_state=42):
 
     # Balance the dataset if requested
     if balance:
-        data = balance_dataset(data, threshold=0.01, keep_prob=0.2)
+        data = balance_dataset(data, threshold=0.01, keep_prob=0.05)
 
     # Split into training and validation sets
     train_data, val_data = train_test_split(
