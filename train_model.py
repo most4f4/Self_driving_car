@@ -235,7 +235,7 @@ if __name__ == "__main__":
         'csv_path': '../data/driving_log.csv',
         'balance': True,
         'batch_size': 32,
-        'epochs': 30,
+        'epochs': 50,
         'learning_rate': 0.0003,
         'model_save_path': 'model.keras'
     }
